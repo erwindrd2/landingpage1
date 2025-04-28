@@ -1,0 +1,428 @@
+/* red-hat-display-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/red-hat-display-v20-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-display-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/red-hat-display-v20-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-display-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/red-hat-display-v20-latin-900.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@mixin textpreset1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: clamp(2.5rem, 1.429rem + 2.857vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: 0px;
+    font-weight: 900;
+}
+
+@mixin textpreset2 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: clamp(2rem, 1.643rem + 0.952vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: 0px;
+    font-weight: 900;
+}
+
+@mixin textpreset3 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: clamp(0.75rem, 0.571rem + 0.476vw, 1rem);
+    line-height: 1.1;
+    letter-spacing: 4px;
+    font-weight: 900;
+    }
+
+    @mixin textpreset4 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
+    line-height: 1.1;
+    letter-spacing: 0px;
+    font-weight: 500;
+    }
+
+    @mixin textpreset5{
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        letter-spacing: 0px;
+        font-weight: 900;
+    }
+
+$color-cyan-600: rgb(77, 150, 168);
+$color-cyan-500: hsl(192, 54%, 64%);
+$color-cyan-300: hsl(192, 90%, 77%);
+$color-purple-600: hsl(268, 34%, 53%);
+$color-purple-500: hsl(269, 56%, 70%);
+$color-purple-300: hsl(268, 100%, 86%);
+$color-slate-900: hsl(240, 21%, 20%);
+$color-slate-600: hsl(240, 10%, 57%);
+$color-slate-300: hsl(240, 18%, 85%);
+$color-white: hsl(0, 0%, 98%);
+
+
+$space-4: 0.25rem;
+$space-8: 0.5rem;
+$space-16: 1rem;
+$space-24: 1.5rem;
+$space-32: 2rem;
+$space-40: 2.5rem;
+$space-48: 3rem;
+$space-56: 3.5rem;
+$space-64: 4rem;
+$space-72: 4.5rem;
+$space-80: 5rem;
+$space-112: 7rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-white;
+}
+.button {
+    border-radius: 29px;
+    padding: 16px 40px;
+    @include textpreset5;
+    color: $color-white;
+    border: none;
+    margin-right: $space-16;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button-blue {
+    background-color: $color-cyan-600;
+    margin-block-end: $space-16;
+
+    @media (width=calc(700 / 16 * 1rem)){
+        margin-right: $space-16;
+    }
+
+    .version {
+        color: $color-cyan-300;
+    }
+}
+
+.button-blue:hover {
+    background-color: $color-cyan-500;
+}
+
+.button-purple {
+    background-color: $color-purple-600;
+
+    .version {
+        color: $color-purple-300;
+    }
+}
+
+.button-purple:hover {
+    background-color: $color-purple-500;
+}
+
+header {
+    margin-block-start: $space-48;
+    margin-block-end: $space-64;
+}
+
+.header__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+
+
+
+
+.hero__image {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-block-end: $space-48;
+
+    @media (width<calc(700 / 16 * 1rem)){
+        gap: 1rem;
+    }
+
+    @media (width>=calc(1100 / 16 * 1rem)) {
+        gap: 40rem;
+    }
+   
+    &__left {
+        width: 120%;
+        height: auto;
+        margin-left: -30px;
+        overflow-x: hidden;
+        max-width: 394px;
+      
+    }
+        
+
+    &__right {
+        width: 120%;
+        height: auto;
+        max-width: 394px;
+       
+
+    }  
+       
+ 
+    }
+
+
+.hero__text {
+    margin-left: $space-32;
+    margin-right: $space-32;
+
+    
+
+    @media (width >=calc(700 /16 * 1rem)) {
+            max-width: 448px;
+           margin: auto auto;
+        
+        }
+ @media (width>=calc(1100 / 16 * 1rem)) {
+     margin-block-start: -19rem;
+ }
+      
+
+}
+
+.hero__title {
+    @include textpreset1;
+    text-align: center;
+    text-wrap: balance;
+    margin-block-end: $space-24;
+    color: $color-slate-900;
+}
+
+.hero__description {
+    @include textpreset4;
+    color: $color-slate-600;
+    text-align: center;
+    margin-block-end: $space-24;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.divider {
+    margin-block-start: $space-32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white;
+    
+    
+
+    &__line {
+        height: 80px;
+        width: 1px;
+        background-color: $color-slate-300;
+    }
+
+    &__text {
+        @include textpreset5;
+        color: $color-slate-600;
+        padding: 16px 18px;
+        border: 1px solid $color-slate-300;
+        border-radius: 999px;
+        background-color: $color-white;
+
+    }
+}
+
+.meetings {
+    margin-block-start: $space-64;
+   
+    
+
+    &__images {
+        display: grid;
+        
+        
+    @media (width<calc(700 / 16 * 1rem)){
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-16;
+        margin-left: $space-32;
+        margin-right: $space-32;
+       
+        .meetings__image {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    @media (width>=calc(700 / 16 * 1rem)){
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space-24;
+        margin-left: $space-40;
+        margin-right: $space-40;
+
+        .meetings__image {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+    }
+}
+
+    &__subtitle {
+        margin-block-start: $space-64;
+        color: $color-cyan-600;
+        @include textpreset3;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    &__title {
+        margin-block-start: $space-16;
+        color: $color-slate-900;
+        text-align: center;
+        @include textpreset2;
+        margin-left: $space-32;
+            margin-right: $space-32;
+       
+        @media (width>=calc(700 / 16 *1rem)){
+            max-width: 445px;
+            margin: auto auto;
+            margin-block-start: $space-16;
+        }
+
+    }
+
+    &__description{
+        text-align: center;
+        margin-block-start: $space-32;
+        @include textpreset4;
+        color: $color-slate-600;
+        margin-left: $space-32;
+        margin-right: $space-32;
+
+        @media (width>=calc(700 / 16 *1rem)) {
+                margin: auto auto;
+                    max-width: 445px;
+                    margin-block-start: $space-32;
+            }
+   
+    }
+}
+
+.footer {
+    z-index: -1;
+    text-align: center;
+    background: url('../mobile/image-footer.jpg') 0 0 no-repeat;
+    background-size: cover;
+    margin-block-start: -30px;
+
+
+    @media (width>=calc(700/ 16 * 1rem)){
+        background: url('../tablet/image-footer.jpg') 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    @media (width>calc(1100 / 16 * 1rem)){
+        background: url('../desktop/image-footer.jpg') 0 0 no-repeat;
+        background-size: cover;
+        
+
+        .footer__text {
+        display: flex;
+        margin-block-start: $space-112;
+        margin-block-end: $space-112;
+        gap: $space-32;
+    }
+
+    
+    }
+
+
+   
+    &__overlay {
+        background: rgba(77, 150, 168, 0.8);
+        overflow: hidden;
+
+    }
+
+
+    &__title{
+        @include textpreset2;
+        color: $color-white;
+        margin-block-start: $space-64;
+
+        @media (width>calc(1100 / 16 * 1rem)) {
+                margin-block-start: 0;
+                width: 15ch;
+                text-align: left;
+                margin-left: 160px;
+
+            }
+
+     
+  
+    }
+
+    &__description{
+        margin-block-start: $space-24;
+        @include textpreset4;
+        color: $color-white;
+        margin-left: $space-32;
+        margin-right: $space-32;
+
+        @media (width>=calc(700 / 16 *1rem)) {
+                margin: auto auto;
+                max-width: 445px;
+                margin-block-start: $space-32;
+                margin-block-start: $space-24;
+            }
+
+        @media (width >calc(1100 / 16 * 1rem)) {
+            margin-block-start: 0;
+            width: 25ch;
+            text-align: left;
+            
+        }
+    }
+
+    &__button {
+        margin-block-start: $space-24;
+        margin-block-end: $space-64;
+     
+        @media (width>calc(1100 / 16 * 1rem)) {
+            margin-block-start: 0;
+            margin-right: 160px;
+        }
+    
+    }
+
+}
